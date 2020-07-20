@@ -34,9 +34,9 @@ puts Store.count
   puts "Annual Revenue: #{i.annual_revenue}"
 end
 
-@womens = Store.where(womens_apparel: true)
+@womens_stores = Store.where("womens_apparel = true and annual_revenue < 1000000")
 
-@womens.each do |i| 
+@womens_stores.each do |i| 
   puts "Name of store: #{i.name}"
   puts "Annual Revenue: #{i.annual_revenue}"
 end
