@@ -10,11 +10,12 @@ puts "----------"
 # Your code goes here ...
 
 @total_revenue = Store.sum(:annual_revenue)
-puts @total_revenue
 
 @average_revenue = Store.average(:annual_revenue)
-puts @average_revenue
 
 @stores_with_1m = Store.where("annual_revenue > 1000000").count
 
-puts @stores_with_1m
+
+puts "All the stores annual revenue is #{@total_revenue}"
+puts "the average of all the stores annual revenue is #{@average_revenue}"
+puts "the number of stores that are generating $1M or more in annual sales is #{@stores_with_1m}"
