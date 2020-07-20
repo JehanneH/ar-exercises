@@ -8,4 +8,6 @@ puts "----------"
 @store1 = Store.find(1)
 @store2 = Store.find(2)
 
-puts @store1.name = "Jehanne's"
+@store1.name = "Jehanne's"
+@store1.save
+puts @store1.name
